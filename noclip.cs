@@ -1,4 +1,4 @@
-﻿using CounterStrikeSharp.API;
+using CounterStrikeSharp.API;
 using CounterStrikeSharp.API.Core;
 using CounterStrikeSharp.API.Core.Attributes;
 using CounterStrikeSharp.API.Core.Attributes.Registration;
@@ -12,18 +12,15 @@ namespace Noclip;
 public class Noclip : BasePlugin
 {
     public override string ModuleName => "noclip";
-    public override string ModuleVersion => "1.0.0";
+    public override string ModuleVersion => "1.0.1";
     public override string ModuleAuthor => "exkludera";
     public override string ModuleDescription => "";
 
-    #region load
     public override void Load(bool hotReload)
     {
 
     }
-    #endregion
 
-    #region commands
     [ConsoleCommand("css_noclip", "noclip command")]
     public void OnCmdNoclip(CCSPlayerController? player, CommandInfo command)
     {
@@ -43,8 +40,6 @@ public class Noclip : BasePlugin
             Utilities.SetStateChanged(player.PlayerPawn.Value, "CBaseEntity", "m_MoveType");
         }
     }
-
-    #endregion
 
     private bool blockCheck(CCSPlayerController? player)
     {
