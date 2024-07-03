@@ -1,4 +1,4 @@
-# cssharp-noclip
+# cs2-noclip | cssharp-noclip
 >plugin request from counterstrikesharp discord
 
 very simple noclip plugin with no configuration or permission checks
